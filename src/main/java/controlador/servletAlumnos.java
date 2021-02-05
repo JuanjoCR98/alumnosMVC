@@ -24,8 +24,6 @@ import modelo.Utilidades;
 public class servletAlumnos extends HttpServlet {
     
       private ArrayList<String> gruposDAW;
-      private ArrayList<Alumno> listadoAlumnosA = null;
-      private ArrayList<Alumno> listadoAlumnosB = null;
       private String rutaFicherosA;
       private String rutaFicherosB;
       
@@ -38,9 +36,7 @@ public class servletAlumnos extends HttpServlet {
                 .concat(File.separator).concat("2daw_a.txt");
         rutaFicherosB = config.getServletContext().getRealPath("").concat(File.separator).concat("ficheros")
                 .concat(File.separator).concat("2daw_b.txt");
-        
-        listadoAlumnosA = Utilidades.getAlumnos(rutaFicherosA);
-        listadoAlumnosB = Utilidades.getAlumnos(rutaFicherosB);     
+           
     }
       
 
